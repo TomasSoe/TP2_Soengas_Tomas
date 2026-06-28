@@ -1,0 +1,55 @@
+    1  ls -l
+    2  fdisk -l
+    3  sudo fdisk -l
+    4  sudo fdisk /dev/sdd
+    5  free
+    6  free -h
+    7  sudo mkswap /dev/sdd1
+    8  free -h
+    9  sudo swapon /dev/sdd1
+   10  free -h
+   11  swapon -s
+   12  cat /proc/swaps
+   13  sudo fdisk /dev/sdc
+   14  sudo wipefs -a /dev/sdc1
+   15  sudo wipefs -a /dev/sdc2
+   16  sudo wipefs -a /dev/sdd2
+   17  sudo wipefs -a /dev/sdd3
+   18  sudo wipefs -a /dev/sdd5
+   19  sudo wipefs -a /dev/sdd6
+   20  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   21  pvs
+   22  sudo pvs
+   23  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   24  vgs
+   25  sudo vgs
+   26  sudo pvs
+   27  sudo vgcreate vg_web /dev/sdc2
+   28  sudo pvs
+   29  sudo lvcreate -L 1G vg_web -n lv_web1
+   30  sudo lvcreate -L 512M vg_web -n lv_web2
+   31  sudo lvcreate -L 512M vg_web -n lv_web3
+   32  sudo lvs
+   33  sudo pvs
+   34  sudo fdisk -l
+   35  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   36  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   37  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   38  ls -l
+   39  ssh-keygen -t ed25519
+   40  cat $HOME/.ssh/*.pub
+   41  ls -l
+   42  mkdir repogit
+   43  ls -l
+   44  cd repogit/
+   45  ls -l
+   46  git clone git@github.com:TomasSoe/TP2_Soengas_Tomas.git
+   47  ls -l
+   48  cd TP2_Soengas_Tomas/
+   49  ls -l
+   50  sudo pvs > pvs.txt
+   51  ls -l
+   52  cat pvs.txt 
+   53  sudo vgs > vgs.txt
+   54  sudo lvs > lvs.txt 
+   55  history > historial_lvm.txt
